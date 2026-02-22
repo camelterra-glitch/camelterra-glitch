@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>camelterra-glitch のアプリ一覧</title>
+
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Kaisei+Decol:wght@400;700&display=swap" rel="stylesheet">
+
+  <style>
+    /* ── リセット ── */
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+    /* ── 背景：やわらかいグラデーション ── */
+    body {
+      font-family: 'Kaisei Decol', serif;
+      min-height: 100vh;
+      background: linear-gradient(160deg, #e8f4fd 0%, #d4eaf7 40%, #e4f0e8 100%);
+      padding: 3rem 1rem 4rem;
+      color: #2c3e50;
+    }
+
+    /* ── ページ全体を中央寄せ ── */
+    .container {
+      max-width: 640px;
+      margin: 0 auto;
+    }
+
+    /* ── ヘッダー ── */
+    header {
+      text-align: center;
+      margin-bottom: 2.5rem;
+    }
+
+    header .icon {
+      font-size: 3.5rem;
+      display: block;
+      margin-bottom: 0.5rem;
+    }
+
+    header h1 {
+      font-size: 1.8rem;
+      font-weight: 700;
+      color: #2d6a4f;
+      text-shadow: 2px 2px 0 rgba(255,255,255,0.8);
+      line-height: 1.4;
+    }
+
+    header p {
+      margin-top: 0.5rem;
+      font-size: 0.95rem;
+      color: #52796f;
+    }
+
+    /* ── アプリカード ── */
+    .card {
+      background: rgba(255, 255, 255, 0.88);
+      border-radius: 20px;
+      padding: 1.5rem 1.75rem;
+      margin-bottom: 1.25rem;
+      box-shadow:
+        0 4px 0px #b5d5c5,
+        0 6px 20px rgba(0,0,0,0.08);
+      border: 2px solid rgba(255,255,255,0.9);
+      display: flex;
+      align-items: center;
+      gap: 1.25rem;
+      text-decoration: none;
+      color: inherit;
+      transition: transform 0.15s ease, box-shadow 0.15s ease;
+    }
+
+    .card:hover {
+      transform: translateY(-3px);
+      box-shadow:
+        0 7px 0px #b5d5c5,
+        0 10px 25px rgba(0,0,0,0.12);
+    }
+
+    .card:active {
+      transform: translateY(1px);
+      box-shadow:
+        0 2px 0px #b5d5c5,
+        0 3px 10px rgba(0,0,0,0.08);
+    }
+
+    /* カード左側の絵文字 */
+    .card-icon {
+      font-size: 3rem;
+      flex-shrink: 0;
+      line-height: 1;
+    }
+
+    /* カード右側のテキスト */
+    .card-body h2 {
+      font-size: 1.15rem;
+      font-weight: 700;
+      color: #1a5276;
+      margin-bottom: 0.3rem;
+    }
+
+    .card-body p {
+      font-size: 0.9rem;
+      color: #52796f;
+      line-height: 1.6;
+    }
+
+    /* 「開く」バッジ */
+    .card-arrow {
+      margin-left: auto;
+      flex-shrink: 0;
+      background: linear-gradient(135deg, #52b788, #2d6a4f);
+      color: white;
+      font-size: 0.8rem;
+      font-weight: 700;
+      padding: 0.35rem 0.8rem;
+      border-radius: 50px;
+      white-space: nowrap;
+    }
+
+    /* ── フッター ── */
+    footer {
+      text-align: center;
+      margin-top: 2.5rem;
+      font-size: 0.82rem;
+      color: #6b8f71;
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+
+    <!-- ヘッダー -->
+    <header>
+      <span class="icon">🌿</span>
+      <h1>camelterra-glitch の<br>アプリ一覧</h1>
+      <p>Pythonと Streamlitで 作った Webアプリです。</p>
+    </header>
+
+    <!-- アプリ① ことばクイズ -->
+    <a class="card"
+       href="https://kotoba-quiz-rjkrkafdobrdappid87m5cd.streamlit.app/"
+       target="_blank" rel="noopener noreferrer">
+      <span class="card-icon">📚</span>
+      <div class="card-body">
+        <h2>ことばクイズ</h2>
+        <p>小学生むけの 語彙力アップ クイズアプリ。<br>
+           3段階のレベルで あそべます。</p>
+      </div>
+      <span class="card-arrow">▶ 開く</span>
+    </a>
+
+    <!-- アプリ② まほうのもりへのぼうけん -->
+    <a class="card"
+       href="https://magical-forest-j3czxhf4nuiv2kmkjcjqkx.streamlit.app/"
+       target="_blank" rel="noopener noreferrer">
+      <span class="card-icon">🌲</span>
+      <div class="card-body">
+        <h2>まほうのもりへのぼうけん</h2>
+        <p>えらんだこたえで ストーリーが 分かれる<br>
+           子ども向け 冒険ゲーム。結末は 全8種類！</p>
+      </div>
+      <span class="card-arrow">▶ 開く</span>
+    </a>
+
+    <!-- フッター -->
+    <footer>
+      <p>© 2026 camelterra-glitch ／ Made with Python & Streamlit 🐍</p>
+    </footer>
+
+  </div>
+</body>
+</html>
